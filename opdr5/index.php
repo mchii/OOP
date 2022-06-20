@@ -1,6 +1,6 @@
 <?php
 
-class vugel
+class vogel
 {
     public $name;
     public $color;
@@ -12,7 +12,7 @@ class vugel
         $this->aantalEieren = $aantalEieren;
     }
 }
-class Parkiet extends vugel
+class parkiet extends vogel
 {
 
     public function getEieren()
@@ -22,13 +22,13 @@ class Parkiet extends vugel
     public function message()
     {
 
-        echo "Welke Vogel is het?";
+        echo "Vertel eens wat over de vogel?";
     }
     public function intro()
     {
         echo "<br>" . "De vogel is {$this->name} en de color is {$this->color}. Hij legt {$this->getEieren()} eieren per maand.";
     }
 }
-$parkiet = new Parkiet("een parkiet", "groen met blauw");
+$parkiet = new parkiet("een parkiet", "groen met blauw", 20);
 $parkiet->message();
 $parkiet->intro();
