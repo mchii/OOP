@@ -8,6 +8,10 @@ class Vogel
         $this->name = $name;
         $this->color = $color;
     }
+    public function message()
+    {
+        echo "Welke Vogel is het?";
+    }
     public function intro()
     {
         echo "<br>" . "De vogel is {$this->name} en de color is {$this->color}.";
@@ -16,9 +20,9 @@ class Vogel
 // Strawberry is inherited from Fruit
 class Parkiet extends Vogel
 {
-    public function message()
+    public function intro()
     {
-        echo "Welke Vogel is het?";
+        echo "<br>" . "De vogel is {$this->name} en de color is {$this->color}.";
     }
 }
 $strawberry = new Parkiet("een parkiet", "groen met blauw");
